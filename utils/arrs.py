@@ -14,14 +14,13 @@ def get(array, index, default=None):
     if index < 0:
         return default
 
+    if not array:
+        return default
+
     return array[index]
 
 
-def len(coll):
-    pass
-
-
-def my_slice(coll, start=0, end=None, length=None):
+def my_slice(coll, start=0, end=None):
     """
     Возвращает новый массив, содержащий копию части исходного массива.
     :param coll: исходный список.
@@ -31,7 +30,7 @@ def my_slice(coll, start=0, end=None, length=None):
     Если индекс отрицательный, end указывает смещение от конца списка. По умолчанию равен длине исходного списка.
     :return: массив элементов
     """
-    len(coll)
+    length = len(coll)
 
     if length == 0:
         return []
